@@ -2,7 +2,8 @@
 
 ## Description
 This website is a copy of "The Band" to W3 School. It's just for training on HTML/CSS && JAVASCRIPT.
-Website Original:
+
+Original Website:
 
 https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 
