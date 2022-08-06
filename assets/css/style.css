@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import "reset.css";
+
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV BARS */
+
+nav {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; 
+}
+
+.nav__link, .nav__btn-dropdown  {
+  background-color: inherit;
+  color : white;
+  border: none;
+  cursor: pointer;
+  padding: 15px 24px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.nav__link:hover, .nav__btn-dropdown:hover {
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.nav__btn-dropdown:hover .nav__arrow-dropdown {color: black;}
+
+.nav__dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav__arrow-dropdown {color: white;}
+
+.nav__dropdown-content{
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+  background-color: #fff;
+  min-width: 150px;
+}
+
+.nav__dropdown-content a {
+  color: black;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.nav__dropdown-content a:hover {
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.nav__dropdown:hover .nav__dropdown-content{display: block;}
+
+.nav__dropdown:hover .nav__btn-dropdown {
+background-color: #CCCCCC;
+color: black;
+}
+
+.nav__dropdown:hover .nav__arrow-dropdown {color: black;}
+
+.nav__search {
+  margin-left: auto; 
+  margin-right: 0;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__bars{
+margin-left: auto; 
+margin-right: 0;
+min-width: 50px;
+display: none;
+align-items: center;
+justify-content: center;
+}
+
+.nav__search:hover{
+background-color: #f44336;
+cursor: pointer;
+}
+
+.nav__bars:hover{
+background-color: #ccc;
+cursor: pointer;
+}
+
+.nav__search .fa-search, .fa-bars{
+color: white;
+height: 15px;
+width: 15px;
+}
+
+@media(max-width: 601px){
+.nav__bars {
+  display: flex;
+}
+.nav__search, .nav__hide {
+  display: none;
+}
+}
+
+#nav__menu-bars {
+position: fixed;
+top: 0;
+left: 0;
+background-color: #000;
+color: white;
+display: none;
+flex-direction: column;
+margin-top: 50px;
+width: 100%;    font-family: 'Lato', sans-serif;
+font-size: 14px;
+text-decoration: none;
+line-height: 1.5;
+}
+
+.nav__menu-bars-link {
+width: 100%;
+text-decoration: none;
+color: white;
+padding: 12px 24px;
+}
+
+.nav__menu-bars-link:hover {
+background-color: #ccc;
+color: black;
+}
+
+/* SLIDE */
+
+.sl__container {
+  width:100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.sl__slide, .sl__fade {
+  position: relative;
+  margin: 0px;
+}
+
+.sl__slide img {
+  width:100%;
+  margin: 0px;
+}
+
+.sl__fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+.sl__h3-p {
+  position: absolute;
+  color: #CCCCCC;
+  font-size: 15px;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%,0%);
+}
+
+.sl__slide h3 {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 24px;
+  margin: 20px;
+}
+
+/* THE BAND */
+
+.bd__container {
+  display: flex;
+  text-align: center;
+  justify-content:center;
+  flex-direction: column;
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.bd__title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 30px;
+  color: #000;
+  margin: 10px 0px;
+  letter-spacing: 4px;
+}
+
+.bd__subtitle {
+  opacity: 0.6;
+  margin: 15px 10px;
+}
+
+.bd__subtitle i {font-style: italic;}
+
+.bd__container .bd__article {
+  text-align: justify;
+  margin: 15px, 0px;
+}
+
+.bd__pictureband {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 32px 32px;
+}
+
+.bd__name {margin: 15px 0px;}
+
+.bd__pictureband img {
+  width: 60%;
+  border-radius: 4;
+}
+
+@media(max-width: 601px){
+  .bd__pictureband {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+  .bd__pictureband img {
+    width: 80%;
+  }
+}
+
+/* TOUR DATES */
+
+.tourdates{
+  background-color: #000;
+  color: #fff;
+}
+
+.trd__container {
+  display: flex;
+  text-align: center;
+  justify-content:center;
+  flex-direction: column;
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}
+
+.trd__title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 30px;
+  margin: 10px 0;
+  letter-spacing: 4px;
+}
+
+.trd__subtitle{
+  opacity: 0.60;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.trd__calendar {
+  background-color: #fff;
+  color: #757575;
+  border: 1px solid #CCC
+}
+
+.trd__calendar-month {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+
+.trd__calendar-soldout {
+  background-color: #f44336;
+  margin-left: 16px;
+  color: white;
+  padding: 0 8px;
+}
+
+.trd__calendar-tickets {
+  float: right;
+  border-radius: 50%;
+  background-color: #000;
+  color: white;
+  margin-right: 16px;
+  padding: 0 8px;
+}
+
+.trd__calendar-reserved {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 32px 0px;
+}
+
+.trd__card {
+  padding: 0 10px;
+  text-align: left;
+}
+
+.trd__card:first-child {padding: 0 0px;}
+
+.trd__card:last-child {padding: 0 0px;}
+
+.trd__card img {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.trd__card img:hover {opacity: 0.6;}
+
+.trd__card-block{
+  background-color: white;
+  color: black;
+  padding: 0.15px 16px;
+}
+
+.trd__card-title {
+  margin: 15px 0;
+  font-weight: 800;
+}
+
+.trd__card-subtitle {
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+.trd__card-description {margin: 15px 0;}
+
+.trd__card-btn-buy {
+  display: inline-block;
+  border: none;
+  margin-bottom: 16px;
+  vertical-align: center;
+  padding: 10px 16px;
+  color: white;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.trd__card-btn-buy:hover {
+  opacity: 0.6;
+  cursor:pointer;
+}
+
+@media(max-width: 601px){
+  .trd__calendar-reserved {
+    flex-direction: column;
+  }
+  .trd__card, .trd__card:first-child, .trd__card:last-child{
+    padding: 10px 10px;
+  }
+}
+
+
+/* CONTACT  */
+
+.contact {
+  background-color: white;
+  color: black;
+}
+
+.ct__container {
+  display: flex;
+  text-align: center;
+  justify-content:center;
+  flex-direction: column;
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.ct__title {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 29px;
+  margin: 10px 0;
+  letter-spacing: 4px;
+}
+
+.ct__subtitle{
+  opacity: 0.60;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.ct__txtcontact-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ct__txtcontact {
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+
+}
+
+.ct__txtcontact .fa {
+  margin-right: 15px;
+  width: 16px;
+  height: 16px;
+}
+
+.ct__txtcontact-form form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px #ccc;
+}
+
+.ct__input-name {margin: 0 4px 8px 0;}
+.ct__input-email {margin: 0 0 8px 4px;}
+
+.ct__input-name, .ct__input-email, .ct__input-message {
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  padding: 8px;
+}
+
+.ct__input-submit {
+  display: block;
+  position: relative;
+  margin: 16px 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 8px;
+  width: auto;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.ct__input-submit:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+@media(max-width: 601px){
+  .ct__txtcontact-form{
+    flex-direction: column;
+    padding: 10px 0px;
+    justify-content: center;
+  }
+  .ct__txtcontact {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .ct__txtcontact-form form {
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+  }
+  .ct__name-email {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .ct__input-name, .ct__input-email {
+    width: auto;
+    margin: 5px 0;
+    padding: 5px;
+  }
+  .ct__input-message {
+    margin: 5px 0;
+  }
+  .ct__input-submit {
+    width : auto;
+    display: block;
+    margin: 5px 0;
+    padding: 15px;
+  }
+}
+
+/* MAP */
+
+.map img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  filter: grayscale(50%);
+  height: auto;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 64px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+footer .fa, .fa-brands, p {opacity: 0.6;}
+footer .fa:hover, .fa-brands:hover {opacity: 0.4;}
+
+footer p {
+  font-size: 14px;
+  margin: 15px 0;
+
+}
+
+footer p a {
+  text-decoration: underline;
+  color: black;
+}
+
+
+/* BUY TICKETS */
+
+#buy-tickets {
+  animation: translate-y;
+  animation-duration: 1s;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  overflow: auto; 
+}
+
+@keyframes translate-y {
+  from {top: -300px;
+        opacity: 0.95;} 
+  to {top: 0px;
+      opacity: 1;}
+}
+
+.bt__windows {
+  position: relative;
+  margin: auto;
+  max-width: 900px;
+  padding: 0;
+}
+
+.bt__header {
+  background-color: #009688;
+  color: white;
+  padding: 32px 16px;
+}
+
+.bt__close {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  top: 0px;
+  padding: 15px;
+}
+
+.bt__close:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
+.bt__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+
+.bt__title i {
+  color: white;
+  margin: 0 16px 0 0;
+}
+
+.bt__container {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.bt__container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+
+}
+
+.bt__container label {
+  margin: 15px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.bt__container label i {
+  margin-right: 5px;
+}
+
+.bt__input-many, .bt__input-email {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.bt__input-pay {
+  background-color: #009688;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: white;
+  margin: 16px 0;
+  border: none;
+}
+
+.bt__input-pay:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
+.bt__close-help{
+  display:flex; 
+  flex-direction:  row;
+  justify-content: space-between;
+}
+.bt__btn-close {
+  margin: 16px 0;
+  padding: 8px;
+  color: white;
+  background-color: #f44336;
+  border: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.bt__btn-close .fa-xmark {
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.bt__btn-close:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+}
+
+.bt__close-help p{
+  margin: 16px 0;
+  padding: 8px;
+}
+
+@media(max-width: 601px){
+  .bt__windows {
+    margin: 0px 10px;
+  }
+}
