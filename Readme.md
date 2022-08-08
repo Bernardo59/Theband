@@ -1,4 +1,4 @@
-# Website - The Band
+# The Band
 
 ## Description
 This website is a copy of "The Band" to W3 School. It's just for training on HTML/CSS && JAVASCRIPT.
