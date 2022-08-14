@@ -1,7 +1,9 @@
 # The Band
 
 ## Description
-This website is a copy of "The Band" to W3 School. It's just for training on HTML/CSS && JAVASCRIPT.
+This website is a copy of the W3 Schools "The Band" template.
+
+Just to practice HTML CSS and JavaScript.
 
 Original Website:
 
